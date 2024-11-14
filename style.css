@@ -9,7 +9,9 @@ body,html{
     max-height: 100%;
     margin: 0;
     background-color: #001136;
+cursor:all-scroll;
 }
+
 .header{
     align-items: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -65,7 +67,7 @@ justify-content: center;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 36px;
+    font-size: 26px;
     text-shadow: 0 0 100px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.7), 0 0 30px rgb(0, 140, 255);
 }
 .hero-btn a{
@@ -76,7 +78,6 @@ justify-content: center;
     color: white;
     margin: 20px;
     border: none;
-    cursor: pointer;
     font-size: 18px;
 }
 .hero-btn a:hover{
@@ -113,43 +114,72 @@ h1 {
         flex-wrap: wrap;
         height: 55vh;
         text-align: center;
-        padding: 10px;
+        padding: 20px;
         box-sizing: border-box;
     }
-    
+    .cards1{
+        height: 350px;
+        width: 100%;
+        max-width: 300px;
+        border-radius: 20px;
+        border: solid 2px blue; 
+        box-shadow: 0 0px 50px rgba(0, 195, 255, 0.5);
+        color: #003985;
+    }
+    .cards1:hover{
+   
+        transform: perspective(1000px) rotateY(50deg) rotateX(20deg);
+        transition: 1.7s;
+        box-shadow: 0 8px 16px rgba(0, 195, 255, 0.5);
+        z-index: 10;
+    }
+    .cards1 p{
+        margin: 20px;
+        font-size: 18px;
+      
+    }
     .cards {
-        position: relative;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap: 20px;
-
     }
-    .material-symbols-outlined{
-    padding: 20px;
-    }
+    
     .card {
         background-color: #04003f;
         border: 1px solid #003985;
         border-radius: 20px;
         color: aqua;
-margin: 20px;
-padding: 10px;
+        margin: 20px;
+        padding: 10px;
         text-align: center;
         height: 350px;
         width: 100%;
         max-width: 300px;
         box-sizing: border-box;
-        transition: box-shadow 1s;
+        transition: transform 0.3s, box-shadow 0.3s;
     }
-    .card p {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        margin: 20px;
+    
+    .card:hover {
+        transform: perspective(1000px) rotateY(10deg) rotateX(10deg);
+        box-shadow: 0 8px 16px rgba(0, 195, 255, 0.5);
+        z-index: 10; 
+    }
+    
+    .material-symbols-outlined {
         padding: 20px;
     }
+    
+    .card p {
+        font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 10px;
+        padding: 10px;
+    }
+    
     .card h1 {
-        font-family: sans-serif;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 2px;
     }
     
     .card a {
@@ -159,63 +189,41 @@ padding: 10px;
         padding: 10px;
         text-decoration: none;
         margin: 10px;
+        transition: background-color 0.3s, color 0.3s;
     }
-    .card:hover {
-        color: rgb(255, 255, 255);
-        box-shadow: 0 0 50px rgba(255, 255, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.7), 0 0 30px rgba(0, 225, 255, 0.5);
+    .card a:hover {
+        color: #fff;
+        background-color: #0099ff;
     }
     
-    /* Responsive Design */
+    .card img {
+        border-radius: 10px;
+        max-width: 100%;
+        width: 100%;
+        height: 50%;
+    }
     @media (max-width: 768px) {
         .card {
-            width: 90%; }
+            width: 90%;
+        }
     }
     
     @media (max-width: 480px) {
         .card {
             width: 100%;
         }
-    }
-    
-    .card p{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   margin: 5px;
-    
-    }
-    .card a{
-        margin: 10px;
-        text-decoration: none;
-        box-shadow: 0 0 50px rgba(255, 255, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.7), 0 0 30px rgba(0, 225, 255, 0.5);
-        color: #0099ff42;
-        background: #006eff27;
-        border-radius: 20px;
-        padding: 10px;
-    }
-    .card a:hover{
-        box-shadow: 0 0 20px #001136;
-        color: #004f8f;
-        transition: 2s;
-        background-color: rgb(0, 238, 255);
-    }
-    .card img{
-        border-radius: 5px;
-        width: 100%;
-        height: 50%;
-    }
-    .card:hover{
-        color: rgb(255, 255, 255);
-        transition: 1s;
-        box-shadow: 0 0 100px rgba(255, 255, 255, 0.7), 0 0 20px rgba(0, 195, 255, 0.7), 0 0 30px rgba(0, 225, 255, 0.5);
-    }    
+    }  
     .skills-section { text-align: center; padding: 20px; } .skills-section h1 { font-size: 2.5em; margin: 20px; } .skill-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; } .skill { display: flex; flex-direction: column; align-items: center; } .circle { width: 150px; height: 150px; border-radius: 50%; background: conic-gradient(#003452 var(--percentage), #ccc var(--percentage)); display: flex; justify-content: center; align-items: center; margin: 50px; position: relative; transition: background 1.5s ease-in-out; } .circle::after { content: ""; width: 130px; height: 130px; background: white; border-radius: 50%; display: block; position: absolute; } .percentage { position: absolute; font-size: 1.5em; font-weight: bold; color: #4d5bf9; z-index: 1; } .skill-name { position: absolute; bottom: 30px; font-size: 1em;  z-index: 1; } /* Responsive Design */ @media (max-width: 768px) { .skill-container { flex-direction: column; align-items: center; } .circle { width: 120px; height: 120px; } .circle::after { width: 100px; height: 100px; } }                                                                                                
     .loader-container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
+        overflow: hidden;
     }
 
     .loader {
+        overflow: hidden;
         width: 50px;
         height: 50px;
         border-radius: 50%;
