@@ -26,6 +26,7 @@
             <a href="#">Services</a>
             <a href="#">Contact</a>
         </nav>
+        <div class="hamburger" onclick="toggleMenu()"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </div>
     </header>
 <section class="hero">
 <div class="text">
@@ -140,6 +141,15 @@ window.addEventListener('load', () => {
         document.querySelector('.loader-container').style.display = 'none';
         document.getElementById('main-content').style.display = 'block';
     }, 5000);
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
 });
 
 </script>
