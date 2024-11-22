@@ -52,7 +52,7 @@ display: flex;
     background-image: url(MO\ \(2\).png);
     max-width: 100%;
     background-size: cover;
-    max-height: 1100px;
+    height: 1100px;
     align-items: center;
     text-align: center;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
