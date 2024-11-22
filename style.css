@@ -50,7 +50,6 @@ transition: 1.5s;
 display: flex;
     position: relative;
     background-image: url(MO\ \(2\).png);
-    max-width: 100%;
     background-size: cover;
     height: 1100px;
     align-items: center;
